@@ -13,6 +13,7 @@ var myGameArea = {
         this.interval = setInterval(updateGameArea, 20); //ogni 20 ms chiamo il metodo updateGameArea
     },
     draw: function (component) {
+        this.context.clearRect(0,0,this.canvas.width,this.canvas.height);
         this.context.fillStyle = component.color;
         this.context.fillRect(component.x, component.y, component.width, component.height);
     }
